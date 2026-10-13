@@ -1,0 +1,37 @@
+[
+  {
+    "origem": "exemplo redigido para demonstracao",
+    "idioma": "en",
+    "titulo": "Sales dashboard chart",
+    "texto": "Our sales analytics report should work as a dashboard chart.",
+    "url": ""
+  },
+  {
+    "origem": "exemplo redigido para demonstracao",
+    "idioma": "en",
+    "titulo": "Sales by brand",
+    "texto": "A sales report needs a filter for the product brand.",
+    "url": ""
+  },
+  {
+    "origem": "exemplo redigido para demonstracao",
+    "idioma": "en",
+    "titulo": "Customer name in report",
+    "texto": "The sales report should display the customer name, not only a code.",
+    "url": ""
+  },
+  {
+    "origem": "exemplo redigido para demonstracao",
+    "idioma": "en",
+    "titulo": "Permissions for sales",
+    "texto": "The dashboard should respect role permissions when displaying sales.",
+    "url": ""
+  },
+  {
+    "origem": "exemplo redigido para demonstracao",
+    "idioma": "en",
+    "titulo": "Price reduction",
+    "texto": "The software needs to record a price reduction with zero quantity.",
+    "url": ""
+  }
+]

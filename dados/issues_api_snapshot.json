@@ -1,0 +1,37 @@
+[
+  {
+    "origem": "API GitHub",
+    "idioma": "en",
+    "titulo": "Sales Analytics Report: incompatible with Dashboard Chart",
+    "texto": "### Information about bug\r\n\r\nBecause the dataset for the Sales Analytics report is compiled in js after the checkboxes are ticked, and other non-standard data, this report cannot be used on a Workspace or Dashboard Chart which is an essential use-case.\r\n\r\nRelated:\r\nhttps://github.com/frappe/erpnext/issues/40729\r\n\r\n### Module\r\n\r\nselling\r\n\r\n### Version\r\n\r\nv16 develop\r\n\r\n### Installation method\r\n\r\nNone\r\n\r\n### Relevant log output / Stack trace / Full Error Message.\r\n\r\n_No response_",
+    "url": "https://github.com/frappe/erpnext/issues/40751"
+  },
+  {
+    "origem": "API GitHub",
+    "idioma": "en",
+    "titulo": "Sales Analytics by Brand",
+    "texto": "**Is your feature request related to a problem? Please describe.**\r\nCurrently there is no way in ERPNext to view sales based on the brand of the item.\r\n\r\n**Describe the solution you'd like**\r\nWithin the existing filters, under Tree Type, \"Brand\" could be added in report \"Sales Analytics\"\r\n\r\n**Describe alternatives you've considered**\r\nI could not find any alternative within ERPNext than building a new report. But since the Sales Analytics report itself is very good, it will be better to incorporate within it.\r\n\r\n**Additional context**\r\n<img width=\"552\" alt=\"image\" src=\"https://github.com/user-attachments/assets/4d980a0e-b8ae-4b00-8097-a600848685c4\">\r\n\r\n",
+    "url": "https://github.com/frappe/erpnext/issues/43635"
+  },
+  {
+    "origem": "API GitHub",
+    "idioma": "en",
+    "titulo": "Sales Analytics report - Feature Request",
+    "texto": "In the Sales Analytics report, is it possible to get Customer names with or without Codes. We need the customers to be saved with codes, but would want the reports to have the customer name as its very difficult to analyse the reports with just the customer codes.\r\n![sales analytics](https://cloud.githubusercontent.com/assets/18025664/23123406/35839f84-f78e-11e6-9f40-fc7e567c9cf4.png)\r\n",
+    "url": "https://github.com/frappe/erpnext/issues/7788"
+  },
+  {
+    "origem": "API GitHub",
+    "idioma": "en",
+    "titulo": "Sales Analytics Report and Sales Register Report disregards User Role Permissions",
+    "texto": "### Information about bug\n\nThe Sales Analytics Report currently fetches and displays sales data for all users, regardless of their assigned roles and permissions. This includes data from branches and POS profiles that the user cannot access.\r\n\r\n**Steps to Reproduce:**\r\n\r\n- Log in as a user with limited permissions (e.g., a branch user).\r\n\r\n- Access the Sales Analytics Report.\r\n\r\n- Observe the report data.\r\n\r\n**Expected Behavior:** The report should only display sales data relevant to the user's role and permissions. For example, a branch user should only see sales data for their specific branch.\r\n\r\n**Actual Behavior:** The report displays sales data for all branches and POS profiles, including those that the user is not authorized to view.\r\n\r\n\n\n### Module\n\nselling\n\n### Version\n\nFrappe: Version-15\r\nERPNext: Version-15\n\n### Installation method\n\nNone\n\n### Relevant log output / Stack trace / Full Error Message.\n\n_No response_",
+    "url": "https://github.com/frappe/erpnext/issues/43935"
+  },
+  {
+    "origem": "API GitHub",
+    "idioma": "en",
+    "titulo": "Rate Reduction via Credit Note",
+    "texto": "## Bug Report / Feature Request: Rate Adjustment Entry for Credit Note (Rate Reduction)\n\n### Module\nAccounts > Sales Invoice > Credit Note\n\n### ERPNext Version\n(Version 16)\n\n---\n\n### Problem Statement\n\nERPNext currently supports **\"Is Rate Adjustment Entry (Debit Note)\"** for rate **increase** scenarios — which correctly generates an e-Invoice with **zero quantity** and **no stock movement**.\n\nHowever, there is **no equivalent feature for rate reduction**, which should be handled via a **Credit Note**.\n\n---\n\n### Current Behavior\n\nWhen a seller needs to issue a Credit Note for rate reduction (price revision downward):\n- Credit Note with actual qty → Incorrect qty submitted to e-Invoice (IRP), implying goods return\n- Qty = 1 with difference amount → No item-wise breakup possible\n- Negative rate/amount → Not accepted by ERPNext\n- Journal Entry → Does not generate e-Invoice\n- Debit Note with rate adjustment → Only works for rate increase, not reduction\n\nNone of the above options correctly handle a **rate reduction Credit Note** with:\n- ✅ Zero quantity in e-Invoice\n- ✅ Item-wise rate difference breakup\n- ✅ No stock movement\n- ✅ GST/e-Invoice compliant output\n\n---\n\n### Expected Behavior\n\nA **\"Is Rate Adjustment Entry\"** checkbox should be available on **Credit Notes** (similar to Debit Notes), which should:\n1. Allow item-wise entry with zero quantity\n2. Accept only the rate difference (reduction amount per item)\n3. Generate e-Invoice with zero qty — purely as a value adjustment\n4. No stock ledger entry\n5. Correctly adjust GST (CGST/SGST/IGST) per item\n\n---\n\n### Why This Matters\n\nThis is a **very common scenario in Indian trade** — rate revisions after invoice issuance are frequent. GST law requires a proper Credit Note with item-wise details. Without this feature, businesses are forced to:\n- Manually generate e-Invoice on IRP portal\n- Enter incorrect qty in the system\n- Use non-compliant workarounds\n\nThis is a **compliance gap** for all Indian ERPNext users.\n\n---\n\n### Suggested Fix\n\nMirror the existing **\"Is Rate Adjustment Entry (Debit Note)\"** logic symmetrically for Credit Notes:\n- Add **\"Is Rate Adjustment Entry (Credit Note)\"** checkbox on Sales Invoice\n- When checked: qty = 0 in e-Invoice, no stock movement, item-wise rate difference entry allowed\n\n---\n\n### Steps to Reproduce\n\n1. Create a Sales Invoice and submit\n2. Try to create a Credit Note for rate reduction only (no goods return)\n3. Observe that no compliant option exists to generate correct e-Invoice with zero qty\n\n---\n\n### Additional Context\n- Country: India\n- GST e-Invoice applicable\n- IRP portal accepts zero qty credit notes for rate reduction\n- Debit Note already has this feature — Credit Note should have it symmetrically",
+    "url": "https://github.com/frappe/erpnext/issues/53760"
+  }
+]
